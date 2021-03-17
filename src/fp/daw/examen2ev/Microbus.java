@@ -4,6 +4,7 @@ public class Microbus extends Vehículo {
 
 	private int plazas;
 	private double precio = precioBase + 2.0;
+	double alquiler;
 
 	public Microbus(String matrícula, double precioBase, double precio, int plazas) {
 		super(matrícula, precioBase);
@@ -17,13 +18,15 @@ public class Microbus extends Vehículo {
 
 	@Override
 	public String toString() {
-		return "Microbus [plazas=" + plazas + ", toString()=" + super.toString() + "]";
+		return "Microbus [plazas=" + plazas + ", " + super.toString() + " precio: " + precio + " alquiler= " + alquiler
+				+ "]";
 	}
 
 	@Override
 	public void getPrecioAlquiler(int días) {
-		double alquiler;
+
 		alquiler = (días * plazas * precio);
+		System.out.println(toString());
 	}
 
 }

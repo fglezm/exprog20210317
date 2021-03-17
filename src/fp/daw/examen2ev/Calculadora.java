@@ -8,15 +8,21 @@ import java.util.Scanner;
 public class Calculadora {
 
 	public static void main(String[] args) throws IOException{
-		BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
-		String linea;
-		Sy in.readLine()stem.out.print("calculadora> ");
-		while (!(linea=in.readLine()).equalsIgnoreCase("fin")) {
+		try{
+			BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+			String linea = in.readLine();
+			System.out.print("calculadora> ");
+			while (!(linea=in.readLine()).equalsIgnoreCase("fin")) {
 			calcular(linea);
 			System.out.print("calculadora> ");
+			}
 		}
+		catch(Exception e){ e.printStackTrace();}
 		
-	static void calcular(String Linea) {
+		
+	String calcular; 
+	{
+		String linea = null;
 		Scanner s=new Scanner(linea);
 		
 		/*
@@ -24,6 +30,11 @@ public class Calculadora {
 		 */
 		s.close();
 	}
+	}
+
+	private static void calcular(String linea) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

@@ -1,6 +1,6 @@
 package fp.daw.examen2ev;
 
-public final class Camión extends Vehículo {
+public class Camión extends Vehículo {
 
 	private int pma;
 	private double precio = precioBase + 20.0;
@@ -18,12 +18,13 @@ public final class Camión extends Vehículo {
 
 	@Override
 	public String toString() {
-		return "Camión [pma=" + pma + super.toString() + ", Precio= " + precio + "alquiler= " + alquiler + "]";
+		return "Camión [pma= " +" "+ pma+" " + super.toString() + ", Precio= " + precio + " alquiler= " + alquiler + "]";
 	}
 
 	@Override
 	public void getPrecioAlquiler(int días) {
 
 		alquiler = (días * pma * precio) + 40.0;
+		System.out.println(toString());
 	}
 }

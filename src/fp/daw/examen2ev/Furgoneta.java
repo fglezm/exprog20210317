@@ -4,6 +4,7 @@ public class Furgoneta extends Vehículo {
 
 	private int pma;
 	private double precio = precioBase + 20.0;
+	double alquiler;
 
 	public Furgoneta(String matrícula, double precioBase, double precio, int pma) {
 		super(matrícula, precioBase);
@@ -17,13 +18,15 @@ public class Furgoneta extends Vehículo {
 
 	@Override
 	public String toString() {
-		return "Furgoneta [pma=" + pma + ", toString()=" + super.toString() + "]";
+		return "Furgoneta [pma= " + " " + pma + " " + super.toString() + ", Precio= " + precio + " alquiler= "
+				+ alquiler + "]";
 	}
 
 	@Override
 	public void getPrecioAlquiler(int días) {
-		double alquiler;
+
 		alquiler = (días * pma * precio);
+		System.out.println(toString());
 	}
 
 }

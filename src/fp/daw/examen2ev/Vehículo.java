@@ -20,6 +20,7 @@ public abstract class Vehículo implements PrecioAlquiler {
 
 	@Override
 	public String toString() {
-		return "Vehículo [matrícula=" + matrícula + ", precioBase=" + precioBase + "]";
+		return "matrícula=" + matrícula + ", precioBase=" + precioBase;
 	}
+
 }
